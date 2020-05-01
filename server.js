@@ -39,6 +39,6 @@ app.put('/image', image.handleImage(db)) // jiný styl zápisu - tady nepotřebu
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res)})
 
 const PORT = process.env.PORT
-app.listen(PORT, () => {
-  console.log(`app is running on port 8080 ${PORT}`)
+app.listen(PORT || 8080, () => {
+  console.log(`app is running on port ${PORT}`)
 })
